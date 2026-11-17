@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get Breach</title>
+<meta name="description" content="Breach: Murder Mysteries — 150 murder-mystery logic puzzles. No ads, 9 languages. Free on the App Store and Google Play.">
+<meta property="og:title" content="Breach: Murder Mysteries">
+<meta property="og:description" content="Somebody is dead. Everybody had a reason. 150 murder-mystery logic puzzles — free to play.">
+<meta property="og:image" content="https://breachmysteries.com/get/og.jpg">
+<meta property="og:url" content="https://breachmysteries.com/get/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0A09">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
+<script>
+  // One link for every platform. Android goes straight to Google Play; iPhone/iPad go to the App Store
+  // once IOS_LIVE is true (until then they see the "coming soon" page below); desktops see both badges.
+  var IOS_LIVE = true;
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.baderkamal.breach&utm_source=get_page';
+  var APPSTORE = 'https://apps.apple.com/app/id6819607630';
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var stay = /[?&]stay\b/.test(location.search); // ?stay shows the page without redirecting (for checking it)
+  if (!stay && isAndroid) location.replace(PLAY);
+  else if (!stay && isIOS && IOS_LIVE) location.replace(APPSTORE);
+</script>
+<style>
+  :root {
+    --bg: #0B0A09; --ink: #F4EEE2; --body: #D9CFBF; --muted: #A89E91; --red: #E8364E; --card: #17130F; --line: #2A231D;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: radial-gradient(ellipse 90% 55% at 50% 22%, rgba(140, 20, 34, .55), transparent 70%), var(--bg);
+    background-color: var(--bg);
+    color: var(--ink); font-family: Poppins, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh; display: flex; justify-content: center;
+    padding: max(28px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  }
+  main { width: 100%; max-width: 440px; text-align: center; }
+  .icon { width: 108px; height: 108px; border-radius: 24px; box-shadow: 0 12px 40px rgba(0, 0, 0, .55); margin-top: 8px; }
+  h1 { font-weight: 800; letter-spacing: .28em; font-size: 40px; margin: 22px 0 0; padding-left: .28em; }
+  .rule { width: 90px; height: 4px; background: var(--red); margin: 12px auto 18px; border-radius: 2px; }
+  .tag { color: var(--body); font-size: 18px; font-weight: 500; margin: 0; line-height: 1.45; }
+  .facts { font-family: 'IBM Plex Mono', ui-monospace, monospace; color: var(--muted); font-size: 12px; letter-spacing: .14em; margin: 14px 0 26px; }
+  .badges { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .badges a, .badges span { display: block; }
+  .badges img { height: 58px; width: auto; display: block; }
+  .soon { position: relative; }
+  .soon img { opacity: .4; filter: grayscale(1); }
+  .soon::after {
+    content: 'COMING SOON'; position: absolute; right: -10px; top: -9px; background: var(--red); color: #fff;
+    font: 700 10px/1 Poppins, sans-serif; letter-spacing: .08em; padding: 5px 7px; border-radius: 999px;
+  }
+  .ios-note { display: none; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 20px 18px; margin: 0 0 22px; text-align: left; }
+  .ios-note h2 { margin: 0 0 6px; font-size: 19px; }
+  .ios-note p { margin: 0 0 14px; color: var(--body); font-size: 15px; line-height: 1.5; }
+  .btn { display: block; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 18px; border-radius: 999px; }
+  .btn.red { background: var(--red); color: #fff; }
+  .btn.ghost { color: var(--ink); border: 1px solid var(--line); margin-top: 10px; }
+  .video { margin: 28px 0 8px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); aspect-ratio: 16 / 9; background: #000; }
+  .video iframe { width: 100%; height: 100%; border: 0; display: block; }
+  footer { margin-top: 26px; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--muted); }
+  body.ios .ios-note { display: block; }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon.png" alt="Breach app icon" width="108" height="108">
+  <h1>BREACH</h1>
+  <div class="rule"></div>
+  <p class="tag">150 murder mysteries.<br>One killer each. Can you find them?</p>
+  <p class="facts">LOGIC PUZZLES · NO ADS · 9 LANGUAGES</p>
+
+  <section class="ios-note" id="ios-note">
+    <h2>Coming soon to iPhone &amp; iPad</h2>
+    <p>Breach is in the final stage of App Store review. Follow us on Instagram and we'll post the moment it's live, or get an email when it lands.</p>
+    <a class="btn red" href="https://www.instagram.com/breach.mysteries/">Follow @breach.mysteries</a>
+    <a class="btn ghost" href="mailto:baderkamal@gmail.com?subject=Notify%20me%3A%20Breach%20on%20the%20App%20Store&body=Please%20let%20me%20know%20when%20Breach%20is%20on%20the%20App%20Store.">Email me when it's out</a>
+  </section>
+
+  <div class="badges">
+    <a id="play" href="https://play.google.com/store/apps/details?id=com.baderkamal.breach&utm_source=get_page" aria-label="Get it on Google Play">
+      <img src="googleplay.png" alt="Get it on Google Play">
+    </a>
+    <a id="appstore" href="https://apps.apple.com/app/id6819607630" aria-label="Download on the App Store">
+      <img src="appstore.png" alt="Download on the App Store">
+    </a>
+  </div>
+
+  <div class="video">
+    <iframe src="https://www.youtube-nocookie.com/embed/5XxY-z3mXKE?rel=0&playsinline=1" title="Breach: Murder Mysteries trailer" loading="lazy"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+  </div>
+
+  <footer>
+    <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a> · <a href="https://www.instagram.com/breach.mysteries/">Instagram</a>
+  </footer>
+</main>
+<script>
+  if (isIOS && !IOS_LIVE) document.body.classList.add('ios');
+  if (!IOS_LIVE) {
+    // Until the App Store listing is live, show its badge as "coming soon" instead of a dead link.
+    var a = document.getElementById('appstore');
+    var s = document.createElement('span');
+    s.className = 'soon';
+    s.setAttribute('aria-label', 'App Store: coming soon');
+    s.innerHTML = a.innerHTML;
+    a.replaceWith(s);
+  }
+</script>
+</body>
+</html>
