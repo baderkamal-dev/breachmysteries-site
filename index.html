@@ -19,11 +19,11 @@
   a{color:var(--accent)}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
   header{padding:64px 0 40px;text-align:center}
-  header img{width:112px;height:112px;border-radius:24px;box-shadow:0 10px 40px rgba(255,90,110,.18)}
+  header .icon{width:112px;height:112px;border-radius:24px;box-shadow:0 10px 40px rgba(255,90,110,.18)}
   h1{font-size:clamp(2rem,6vw,3.2rem);margin:20px 0 4px;letter-spacing:-.02em}
   .tag{font-size:1.25rem;color:var(--muted);margin:0 0 28px}
   .stores{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
-  .badge{display:inline-block;line-height:0;border-radius:10px;transition:transform .15s}
+  .badge{display:inline-block;line-height:0;transition:transform .15s}
   .badge:hover{transform:translateY(-2px)}
   .badge img{height:54px;width:auto}
   .hook{font-size:1.4rem;font-weight:600;text-align:center;margin:24px 0 8px}
@@ -45,7 +45,7 @@
 <body>
 <div class="wrap">
   <header>
-    <img src="/img/icon.png" alt="Breach app icon">
+    <img class="icon" src="/img/icon.png" alt="Breach app icon">
     <h1>Breach: Murder Mysteries</h1>
     <p class="tag">Logic-grid whodunits</p>
     <div class="stores">
