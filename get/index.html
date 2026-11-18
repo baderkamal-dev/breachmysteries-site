@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="apple-itunes-app" content="app-id=6819607630">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Get Breach</title>
 <meta name="description" content="Breach: Murder Mysteries — 150 murder-mystery logic puzzles. No ads, 9 languages. Free on the App Store and Google Play.">
@@ -19,8 +20,14 @@
   // One link for every platform. Android goes straight to Google Play; iPhone/iPad go to the App Store
   // once IOS_LIVE is true (until then they see the "coming soon" page below); desktops see both badges.
   var IOS_LIVE = true;
-  var PLAY = 'https://play.google.com/store/apps/details?id=com.baderkamal.breach&utm_source=get_page';
-  var APPSTORE = 'https://apps.apple.com/app/id6819607630';
+  // ?src=<name> tags the source (e.g. /get/?src=instagram_bio) and ?v=1|2|3 opens that volume's custom product page.
+  // Arabic-language visitors get the Gulf page. pt/ct appear in App Store Connect > Analytics > Campaigns.
+  var q = new URLSearchParams(location.search);
+  var SRC = (q.get('src') || 'get_page').replace(/[^a-z0-9_-]/gi, '').slice(0, 40) || 'get_page';
+  var PPIDS = {'1': 'f23fdaa9-b3c0-4c27-ace4-943ea8a4d0d9', '2': '34a5f64c-2b55-45a7-8eb0-33416121e6c9', '3': '7bfdda1b-cafc-4980-98dd-be62244a8196'};
+  var PPID = PPIDS[q.get('v')] || (/^ar\b/i.test(navigator.language || '') ? PPIDS['2'] : '');
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.baderkamal.breach&utm_source=' + SRC + '&utm_campaign=get_page';
+  var APPSTORE = 'https://apps.apple.com/app/id6819607630?pt=129562922&mt=8&ct=' + SRC + (PPID ? '&ppid=' + PPID : '');
   var ua = navigator.userAgent || '';
   var isAndroid = /Android/i.test(ua);
   var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
@@ -103,6 +110,8 @@
   </footer>
 </main>
 <script>
+  document.getElementById('play').href = PLAY;
+  if (document.getElementById('appstore')) document.getElementById('appstore').href = APPSTORE;
   if (isIOS && !IOS_LIVE) document.body.classList.add('ios');
   if (!IOS_LIVE) {
     // Until the App Store listing is live, show its badge as "coming soon" instead of a dead link.

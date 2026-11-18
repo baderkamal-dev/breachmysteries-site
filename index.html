@@ -9,7 +9,12 @@
 <link rel="apple-touch-icon" href="/img/icon.png">
 <meta property="og:title" content="Breach: Murder Mysteries">
 <meta property="og:description" content="Somebody is dead. Everybody had a reason. 150 logic-grid whodunits.">
-<meta property="og:image" content="https://breachmysteries.com/img/icon.png">
+<meta property="og:image" content="https://breachmysteries.com/get/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://breachmysteries.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Breach: Murder Mysteries","operatingSystem":"iOS, Android","applicationCategory":"GameApplication","applicationSubCategory":"Puzzle","description":"150 murder-mystery logic puzzles in the classic deduction-grid style. No ads, works offline, five free cases in every volume.","image":"https://breachmysteries.com/img/icon.png","url":"https://breachmysteries.com/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"sameAs":["https://apps.apple.com/app/id6819607630","https://play.google.com/store/apps/details?id=com.baderkamal.breach","https://www.instagram.com/breach.mysteries/"]}
+</script>
 <meta property="og:url" content="https://breachmysteries.com/">
 <meta name="apple-itunes-app" content="app-id=6819607630">
 <style>
@@ -29,7 +34,9 @@
   .hook{font-size:1.4rem;font-weight:600;text-align:center;margin:24px 0 8px}
   .lead{max-width:640px;margin:0 auto 40px;text-align:center;color:var(--muted)}
   .vols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:48px}
-  .vol{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .vol{display:block;color:inherit;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .15s,border-color .15s}
+  .vol:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .vol .cta{display:block;margin-top:8px;color:var(--accent);font-weight:600;font-size:.9rem}
   .vol img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
   .vol div{padding:14px 16px}
   .vol h3{margin:0 0 4px;font-size:1.05rem}
@@ -49,8 +56,8 @@
     <h1>Breach: Murder Mysteries</h1>
     <p class="tag">Logic-grid whodunits</p>
     <div class="stores">
-      <a class="badge" href="https://apps.apple.com/app/id6819607630"><img src="/img/appstore.png" alt="Download on the App Store" width="162" height="54"></a>
-      <a class="badge" href="https://play.google.com/store/apps/details?id=com.baderkamal.breach"><img src="/img/googleplay.png" alt="Get it on Google Play" width="181" height="54"></a>
+      <a class="badge" id="as" href="https://apps.apple.com/app/id6819607630?pt=129562922&amp;mt=8&amp;ct=website"><img src="/img/appstore.png" alt="Download on the App Store" width="162" height="54"></a>
+      <a class="badge" id="gp" href="https://play.google.com/store/apps/details?id=com.baderkamal.breach&amp;utm_source=website&amp;utm_campaign=site_badge"><img src="/img/googleplay.png" alt="Get it on Google Play" width="181" height="54"></a>
     </div>
   </header>
 
@@ -58,9 +65,9 @@
   <p class="lead">150 murder-mystery logic puzzles in the classic deduction-grid style. Read the clues, mark the grid — ✕ to rule out, ● to confirm — and name <strong>who</strong> did it, <strong>what</strong> they used and <strong>where</strong>.</p>
 
   <section class="vols">
-    <article class="vol"><img src="/img/v1-scene.jpg" alt="Breach Corporate scene art" loading="lazy"><div><h3>Breach Corporate</h3><p>Startups, server rooms and boardrooms.</p></div></article>
-    <article class="vol"><img src="/img/v2-scene.jpg" alt="Breach Gulf scene art" loading="lazy"><div><h3>Breach Gulf</h3><p>A Gulf family business empire: towers, majlis and desert camps.</p></div></article>
-    <article class="vol"><img src="/img/v3-scene.jpg" alt="Breach Cybersecurity scene art" loading="lazy"><div><h3>Breach Cybersecurity</h3><p>Inside the cybersecurity industry: the SOC at 3 a.m.</p></div></article>
+    <a class="vol" data-vol="1" href="https://apps.apple.com/app/id6819607630?pt=129562922&amp;mt=8&amp;ct=website_vol1&amp;ppid=f23fdaa9-b3c0-4c27-ace4-943ea8a4d0d9"><img src="/img/v1-scene.jpg" alt="Breach Corporate scene art" loading="lazy"><div><h3>Breach Corporate</h3><p>Startups, server rooms and boardrooms.</p><span class="cta">Play the free cases →</span></div></a>
+    <a class="vol" data-vol="2" href="https://apps.apple.com/app/id6819607630?pt=129562922&amp;mt=8&amp;ct=website_vol2&amp;ppid=34a5f64c-2b55-45a7-8eb0-33416121e6c9"><img src="/img/v2-scene.jpg" alt="Breach Gulf scene art" loading="lazy"><div><h3>Breach Gulf</h3><p>A Gulf family business empire: towers, majlis and desert camps.</p><span class="cta">Play the free cases →</span></div></a>
+    <a class="vol" data-vol="3" href="https://apps.apple.com/app/id6819607630?pt=129562922&amp;mt=8&amp;ct=website_vol3&amp;ppid=7bfdda1b-cafc-4980-98dd-be62244a8196"><img src="/img/v3-scene.jpg" alt="Breach Cybersecurity scene art" loading="lazy"><div><h3>Breach Cybersecurity</h3><p>Inside the cybersecurity industry: the SOC at 3 a.m.</p><span class="cta">Play the free cases →</span></div></a>
   </section>
 
   <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/5XxY-z3mXKE" title="Breach: Murder Mysteries — Official Trailer" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
@@ -82,5 +89,22 @@
     <p>© 2026 Bader Kamal</p>
   </div>
 </footer>
+<script>
+  // Tagged store links: pt/ct show up under App Store Connect > Analytics > Campaigns, utm_* under Play Console > Acquisition.
+  // Volume cards open that volume's custom product page; Arabic-language visitors get the Gulf page.
+  (function () {
+    var APP = 'https://apps.apple.com/app/id6819607630?pt=129562922&mt=8';
+    var PLAY = 'https://play.google.com/store/apps/details?id=com.baderkamal.breach&utm_source=website';
+    var PPID = {1: 'f23fdaa9-b3c0-4c27-ace4-943ea8a4d0d9', 2: '34a5f64c-2b55-45a7-8eb0-33416121e6c9', 3: '7bfdda1b-cafc-4980-98dd-be62244a8196'};
+    var android = /Android/i.test(navigator.userAgent || '');
+    var arabic = /^ar\b/i.test(navigator.language || '');
+    function ios(ct, ppid) { return APP + '&ct=' + ct + (ppid ? '&ppid=' + ppid : ''); }
+    document.getElementById('as').href = ios(arabic ? 'website_ar' : 'website', arabic ? PPID[2] : null);
+    document.querySelectorAll('[data-vol]').forEach(function (a) {
+      var v = a.getAttribute('data-vol');
+      a.href = android ? PLAY + '&utm_campaign=site_vol' + v : ios('website_vol' + v, PPID[v]);
+    });
+  })();
+</script>
 </body>
 </html>
